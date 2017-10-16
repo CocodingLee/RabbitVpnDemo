@@ -2,32 +2,8 @@
 a demo project for testing iOS network extension with NEkit
 - 一个使用NEKit的iOS App Demo
 
-Blog [初探iOS Network Extensio](http://www.jianshu.com/p/5ed93a8a1449)
+这个分支用于测试VPN连接状态，不需要引入NEKIT库 同时也不能科学上网，仅用于测试vpn建立
 
-
-编译方法 
-```
-carthage update --no-use-binaries --platform ios
-```
-
-如果遇到
-```
-/Volumes/DOC/Codes/rabbitSwift2.3/Carthage/Checkouts/NEKit/src/Crypto/HMAC.swift:2:8: error: could not build Objective-C module 'CommonCrypto'
-```
-请根据log修改module.map中 sdk版本为相应Xcode模拟器版本。例如
-
-```
-  header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/usr/include/CommonCrypto//CommonCrypto.h"
-  header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/usr/include/CommonCrypto//CommonRandom.h"
-```
-
-如果您受本文启发写了app甚至上架了Appstore，告诉我一声好吗？
-
-# 赞助
-- 支付宝
-
-  ![](http://ww4.sinaimg.cn/large/006tNc79gy1ffd90knw0bj304q04kwet.jpg)
-# License
 MIT License
 
 Copyright (c) 2017 RabbitVpnDemo

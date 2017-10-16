@@ -13,19 +13,8 @@
 		09549AC81DDF3B4A000F198C /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09549ABF1DDF3B49000F198C /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		09549ACF1DDF3C0E000F198C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549ACE1DDF3C0E000F198C /* NetworkExtension.framework */; };
 		09549AD01DDF3C2F000F198C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549ACE1DDF3C0E000F198C /* NetworkExtension.framework */; };
-		09549ADC1DDF406B000F198C /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD21DDF406B000F198C /* CocoaAsyncSocket.framework */; };
-		09549ADD1DDF406B000F198C /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD31DDF406B000F198C /* CocoaLumberjack.framework */; };
-		09549ADE1DDF406B000F198C /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD41DDF406B000F198C /* CocoaLumberjackSwift.framework */; };
-		09549ADF1DDF406B000F198C /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD51DDF406B000F198C /* CommonCrypto.framework */; };
-		09549AE01DDF406B000F198C /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD61DDF406B000F198C /* lwip.framework */; };
-		09549AE11DDF406B000F198C /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD71DDF406B000F198C /* MMDB.framework */; };
-		09549AE21DDF406B000F198C /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD81DDF406B000F198C /* NEKit.framework */; };
-		09549AE31DDF406B000F198C /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549AD91DDF406B000F198C /* Sodium.framework */; };
-		09549AE41DDF406B000F198C /* tun2socks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549ADA1DDF406B000F198C /* tun2socks.framework */; };
-		09549AE51DDF406B000F198C /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09549ADB1DDF406B000F198C /* Yaml.framework */; };
 		0970F9371DE0039F003391DF /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970F9361DE0039F003391DF /* UIView+CornerRadius.swift */; };
 		09A5AD2D1DE0573A00272F7C /* NEKitRule.conf in Resources */ = {isa = PBXBuildFile; fileRef = 09A5AD2C1DE0573A00272F7C /* NEKitRule.conf */; };
-		09E3FB5B1DF859E0001DE158 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E3FB5A1DF859E0001DE158 /* Resolver.framework */; };
 		353C0FDC1DDF393F00A46EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C0FDB1DDF393F00A46EBD /* AppDelegate.swift */; };
 		353C0FDE1DDF393F00A46EBD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C0FDD1DDF393F00A46EBD /* HomeViewController.swift */; };
 		353C0FE11DDF393F00A46EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C0FDF1DDF393F00A46EBD /* Main.storyboard */; };
@@ -102,17 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E3FB5B1DF859E0001DE158 /* Resolver.framework in Frameworks */,
-				09549ADC1DDF406B000F198C /* CocoaAsyncSocket.framework in Frameworks */,
-				09549ADD1DDF406B000F198C /* CocoaLumberjack.framework in Frameworks */,
-				09549ADE1DDF406B000F198C /* CocoaLumberjackSwift.framework in Frameworks */,
-				09549ADF1DDF406B000F198C /* CommonCrypto.framework in Frameworks */,
-				09549AE01DDF406B000F198C /* lwip.framework in Frameworks */,
-				09549AE11DDF406B000F198C /* MMDB.framework in Frameworks */,
-				09549AE21DDF406B000F198C /* NEKit.framework in Frameworks */,
-				09549AE31DDF406B000F198C /* Sodium.framework in Frameworks */,
-				09549AE41DDF406B000F198C /* tun2socks.framework in Frameworks */,
-				09549AE51DDF406B000F198C /* Yaml.framework in Frameworks */,
 				09549ACF1DDF3C0E000F198C /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +256,6 @@
 				353C0FD41DDF393F00A46EBD /* Sources */,
 				353C0FD51DDF393F00A46EBD /* Frameworks */,
 				353C0FD61DDF393F00A46EBD /* Resources */,
-				091B62221EDA7F3100FA4D92 /* ShellScript */,
 				09549ACC1DDF3B4A000F198C /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -364,33 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		091B62221EDA7F3100FA4D92 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjack.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/lwip.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MMDB.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NEKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Sodium.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/tun2socks.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Yaml.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Resolver.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09549ABB1DDF3B49000F198C /* Sources */ = {
