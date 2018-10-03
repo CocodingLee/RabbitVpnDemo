@@ -20,6 +20,8 @@
 		353C0FE31DDF393F00A46EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353C0FE21DDF393F00A46EBD /* Assets.xcassets */; };
 		353C0FE61DDF393F00A46EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C0FE41DDF393F00A46EBD /* LaunchScreen.storyboard */; };
 		4905EC6521648BCE002E6559 /* PacketProcessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49319A202164725000A8E6E7 /* PacketProcessor.framework */; };
+		4905EC6A21648DCF002E6559 /* PacketProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 493196AB21646DD200A8E6E7 /* PacketProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4905EC6F21648FA9002E6559 /* TunnelInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 493196B621646DFD00A8E6E7 /* TunnelInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49319A282164725000A8E6E7 /* PacketProcessor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49319A202164725000A8E6E7 /* PacketProcessor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49319A2C2164725600A8E6E7 /* TunnelInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 493196B721646DFE00A8E6E7 /* TunnelInterface.m */; };
 		49319BE92164727500A8E6E7 /* blog_channel_SocksUdpGwClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 49319A302164727400A8E6E7 /* blog_channel_SocksUdpGwClient.h */; };
@@ -437,7 +439,6 @@
 		49319D89216487DE00A8E6E7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49319A172164704400A8E6E7 /* libresolv.tbd */; };
 		49319D8A21648A0200A8E6E7 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49319D86216474C800A8E6E7 /* NetworkExtension.framework */; };
 		679986B68E200799EE7BFD5D /* Pods_PacketProcessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0EC308F7652980E9D748F /* Pods_PacketProcessor.framework */; };
-		E710DC226BACEA94CFB6890B /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556177769C510FC73698C303 /* Pods_PacketTunnel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,6 +448,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 09549ABE1DDF3B49000F198C;
 			remoteInfo = PacketTunnel;
+		};
+		4905EC6B21648EA9002E6559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 353C0FD01DDF393F00A46EBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49319A1F2164725000A8E6E7;
+			remoteInfo = PacketProcessor;
 		};
 		49319A252164725000A8E6E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -519,6 +527,7 @@
 		353C0FE21DDF393F00A46EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353C0FE51DDF393F00A46EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353C0FE71DDF393F00A46EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4905EC6621648CF8002E6559 /* PacketTunnel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PacketTunnel-Bridging-Header.h"; sourceTree = "<group>"; };
 		493196AB21646DD200A8E6E7 /* PacketProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketProcessor.h; sourceTree = "<group>"; };
 		493196AC21646DD200A8E6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493196B621646DFD00A8E6E7 /* TunnelInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunnelInterface.h; sourceTree = "<group>"; };
@@ -957,7 +966,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4905EC6521648BCE002E6559 /* PacketProcessor.framework in Frameworks */,
-				E710DC226BACEA94CFB6890B /* Pods_PacketTunnel.framework in Frameworks */,
 				49319D87216474C800A8E6E7 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1032,6 +1040,7 @@
 			children = (
 				09549AC31DDF3B4A000F198C /* PacketTunnelProvider.swift */,
 				09549AC11DDF3B4A000F198C /* Supporting Files */,
+				4905EC6621648CF8002E6559 /* PacketTunnel-Bridging-Header.h */,
 			);
 			path = PacketTunnel;
 			sourceTree = "<group>";
@@ -1927,6 +1936,7 @@
 				49319BEA2164727500A8E6E7 /* blog_channel_ncd_file_open.h in Headers */,
 				49319D392164727500A8E6E7 /* SocksUdpGwClient.h in Headers */,
 				49319C162164727500A8E6E7 /* blog_channel_ncd_netmask.h in Headers */,
+				4905EC6F21648FA9002E6559 /* TunnelInterface.h in Headers */,
 				49319C012164727500A8E6E7 /* blog_channel_ncd_process_manager.h in Headers */,
 				49319CEB2164727500A8E6E7 /* api_msg.h in Headers */,
 				49319C672164727500A8E6E7 /* bproto_addr.h in Headers */,
@@ -2020,6 +2030,7 @@
 				49319D412164727500A8E6E7 /* Vector_header.h in Headers */,
 				49319C052164727500A8E6E7 /* blog_channel_BDatagram.h in Headers */,
 				49319CAB2164727500A8E6E7 /* compare.h in Headers */,
+				4905EC6A21648DCF002E6559 /* PacketProcessor.h in Headers */,
 				49319C492164727500A8E6E7 /* blog_channel_addr.h in Headers */,
 				49319D832164727500A8E6E7 /* PacketProtoEncoder.h in Headers */,
 				49319D812164727500A8E6E7 /* PacketPassConnector.h in Headers */,
@@ -2171,6 +2182,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4905EC6C21648EA9002E6559 /* PBXTargetDependency */,
 			);
 			name = PacketTunnel;
 			productName = PacketTunnel;
@@ -2234,7 +2246,7 @@
 					09549ABE1DDF3B49000F198C = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = MEWHFZ92DY;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -2528,6 +2540,11 @@
 			target = 09549ABE1DDF3B49000F198C /* PacketTunnel */;
 			targetProxy = 09549AC61DDF3B4A000F198C /* PBXContainerItemProxy */;
 		};
+		4905EC6C21648EA9002E6559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49319A1F2164725000A8E6E7 /* PacketProcessor */;
+			targetProxy = 4905EC6B21648EA9002E6559 /* PBXContainerItemProxy */;
+		};
 		49319A262164725000A8E6E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 49319A1F2164725000A8E6E7 /* PacketProcessor */;
@@ -2559,6 +2576,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E47BBC00AA6083C7822604F /* Pods-PacketTunnel.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -2578,6 +2597,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "PacketTunnel/PacketTunnel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -2586,6 +2607,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B6B4634A5CF58B75E3962E2 /* Pods-PacketTunnel.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -2605,6 +2628,7 @@
 				PROVISIONING_PROFILE = "c4a7e1f6-ded7-4c77-88c8-62a9cc4e5d35";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PacketTunnel/PacketTunnel-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -2743,6 +2767,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0EF40D574391AF39B5FC8C1 /* Pods-PacketProcessor.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2778,7 +2804,7 @@
 				);
 				INFOPLIST_FILE = PacketProcessor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -2796,6 +2822,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82A929C1150320CAF82C7A36 /* Pods-PacketProcessor.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2831,7 +2859,7 @@
 				);
 				INFOPLIST_FILE = PacketProcessor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.west2online.rabbitvpn.PacketProcessor;
