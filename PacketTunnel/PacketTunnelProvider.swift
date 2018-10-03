@@ -18,9 +18,11 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         networkSettings.mtu = 1500
         let ipv4Settings = NEIPv4Settings(addresses: ["192.169.89.1"], subnetMasks: ["255.255.255.0"])
         networkSettings.iPv4Settings = ipv4Settings
+        TunnelInterface.setup(with: self.packetFlow)
         
         setTunnelNetworkSettings(networkSettings) {
             error in
+            self.startProxy()
             guard error == nil else {
                 completionHandler(error)
                 return
@@ -30,6 +32,12 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
     }
     
+    
+    func startProxy() {
+        let socksPort:Int32 = 7890
+        TunnelInterface.startTun2Socks(socksPort)
+
+    }
 
 	override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         completionHandler()
