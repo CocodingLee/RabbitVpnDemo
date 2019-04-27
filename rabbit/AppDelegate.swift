@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Clash
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let configFile = Bundle.main.path(forResource: "config", ofType: "yml")!
+        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.rabbitvpn.configs")
+        
+        let testUrl = String(container!.absoluteString.dropFirst(7)) + "config.yml"
+//        let str = try! String(contentsOfFile: configFile)
+//        try! str.write(to: container!.appendingPathComponent("config.yml"), atomically: true, encoding: .utf8)
+        try? FileManager.default.removeItem(atPath: testUrl)
+        try! FileManager.default.copyItem(atPath: configFile, toPath: testUrl)
+        
+//        ClashSetDir(String(container!.absoluteString.dropFirst(7)))
+//        ClashRun()
         return true
     }
 

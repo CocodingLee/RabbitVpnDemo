@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         self.status = VpnManager.shared.vpnStatus
     }
     
-    func onVPNStatusChanged(){
+    @objc func onVPNStatusChanged(){
         self.status = VpnManager.shared.vpnStatus
     }
     

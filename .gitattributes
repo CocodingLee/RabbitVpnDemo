@@ -1,0 +1,2 @@
+Clash filter=lfs diff=lfs merge=lfs -text
+Clash.framework/Clash filter=lfs diff=lfs merge=lfs -text
