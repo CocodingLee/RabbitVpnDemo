@@ -17,7 +17,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         let networkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "8.8.8.8")
         networkSettings.mtu = 1500
         let ipv4Settings = NEIPv4Settings(addresses: ["192.169.89.1"], subnetMasks: ["255.255.255.0"])
-        networkSettings.iPv4Settings = ipv4Settings
+        networkSettings.ipv4Settings = ipv4Settings
         
         setTunnelNetworkSettings(networkSettings) {
             error in

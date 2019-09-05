@@ -40,20 +40,20 @@ class HomeViewController: UIViewController {
         self.status = VpnManager.shared.vpnStatus
     }
     
-    func onVPNStatusChanged(){
+    @objc func onVPNStatusChanged(){
         self.status = VpnManager.shared.vpnStatus
     }
     
     func updateConnectButton(){
         switch status {
         case .connecting:
-            connectButton.setTitle("connecting", for: UIControlState())
+            connectButton.setTitle("connecting", for: UIControl.State())
         case .disconnecting:
-            connectButton.setTitle("disconnect", for: UIControlState())
+            connectButton.setTitle("disconnect", for: UIControl.State())
         case .on:
-            connectButton.setTitle("Disconnect", for: UIControlState())
+            connectButton.setTitle("Disconnect", for: UIControl.State())
         case .off:
-            connectButton.setTitle("Connect", for: UIControlState())
+            connectButton.setTitle("Connect", for: UIControl.State())
 
         }
         connectButton.isEnabled = [VPNStatus.on,VPNStatus.off].contains(VpnManager.shared.vpnStatus)
