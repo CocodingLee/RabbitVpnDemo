@@ -209,6 +209,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                 
                 
                 let dnsServer = DNSServer(address: IPAddress(fromString: "198.18.0.1")!, port: NEKit.Port(port: 53), fakeIPPool: fakeIPPool)
+                RawSocketFactory.TunnelProvider = self
                 let resolver = UDPDNSResolver(address: IPAddress(fromString: "114.114.114.114")!, port: NEKit.Port(port: 53))
                 dnsServer.registerResolver(resolver)
                 self.interface.register(stack: dnsServer)
